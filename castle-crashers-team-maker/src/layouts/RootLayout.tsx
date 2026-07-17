@@ -11,7 +11,7 @@ export default function RootLayout() {
 					<NavLink to="/gallery">Knights Gallery</NavLink>
 				</nav>
 			</header>
-			<main>
+			<main className="main-content">
 				<Outlet />
 			</main>
 		</div>

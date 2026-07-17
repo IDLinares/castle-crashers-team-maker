@@ -1,4 +1,4 @@
-.app-layout {
+.root-layout {
 	display: flex;
 	flex-direction: row;
 	min-height: 100vh;
@@ -21,4 +21,9 @@
 a.active {
 	color: #ff0000;
 	font-weight: bold;
+}
+
+.main-content {
+	flex: 1;
+	min-width: 0;
 }
