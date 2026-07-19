@@ -24,7 +24,16 @@ export default function KnightsGallery() {
 			<h1>View Your Knights Gallery!</h1>
 			<div className="gallery-container">
 				{knights.map((knight) => (
-					<KnightSummaryCard key={knight.id} name={knight.name} magic={knight.magic} weapon={knight.weapon} pet={knight.pet} color={knight.color} />
+					<KnightSummaryCard
+						key={knight.knight_id}
+						id={knight.knight_id}
+						name={knight.name}
+						magic={knight.magic}
+						weapon={knight.weapon}
+						pet={knight.pet}
+						color={knight.color}
+						onDelete={(id) => setKnights((prev) => prev.filter((k) => k.knight_id !== id))}
+					/>
 				))}
 			</div>
 		</div>
