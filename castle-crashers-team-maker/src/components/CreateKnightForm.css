@@ -1,0 +1,22 @@
+.card-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 2rem;
+}
+
+.card {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 2rem;
+	box-shadow: var(--shadow);
+	width: 100%;
+	max-width: 420px;
+}
+
+.create-knight-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}

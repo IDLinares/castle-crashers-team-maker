@@ -5,6 +5,8 @@ import './index.css';
 
 import RootLayout from './layouts/RootLayout';
 import Home from './routes/Home';
+import CreateKnight from './routes/CreateKnight';
+import KnightsGallery from './routes/KnightsGallery';
 
 const router = createBrowserRouter([
 	{
@@ -17,11 +19,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'create',
-				element: <h1>Create a Knight!</h1>,
+				element: <CreateKnight />,
 			},
 			{
 				path: 'gallery',
-				element: <h1>Knights Gallery</h1>,
+				element: <KnightsGallery />,
 			},
 		],
 	},
