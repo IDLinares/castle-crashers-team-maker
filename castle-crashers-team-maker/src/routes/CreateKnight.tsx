@@ -11,7 +11,7 @@ export default function CreateKnight() {
 				<img src={homeImg} alt="Castle Crashers Home" />
 			</div>
 			<CreateKnightForm />
-			<p>You can change your knight's stats later!</p>
+			<p>You can change your knight's attributes later!</p>
 		</div>
 	);
 }

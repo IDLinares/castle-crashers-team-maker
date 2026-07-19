@@ -6,3 +6,10 @@
 	gap: 24px;
 	padding: 24px;
 }
+
+.gallery-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 24px;
+}

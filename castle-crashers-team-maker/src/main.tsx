@@ -7,6 +7,7 @@ import RootLayout from './layouts/RootLayout';
 import Home from './routes/Home';
 import CreateKnight from './routes/CreateKnight';
 import KnightsGallery from './routes/KnightsGallery';
+import EditKnight from './routes/EditKnight';
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 			{
 				path: 'gallery',
 				element: <KnightsGallery />,
+			},
+			{
+				path: 'edit/:id',
+				element: <EditKnight />,
 			},
 		],
 	},
