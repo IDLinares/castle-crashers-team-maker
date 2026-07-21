@@ -8,6 +8,7 @@ import Home from './routes/Home';
 import CreateKnight from './routes/CreateKnight';
 import KnightsGallery from './routes/KnightsGallery';
 import EditKnight from './routes/EditKnight';
+import KnightDetail from './routes/KnightDetail';
 
 const router = createBrowserRouter([
 	{
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
 			{
 				path: 'edit/:id',
 				element: <EditKnight />,
+			},
+			{
+				path: 'detail/:id',
+				element: <KnightDetail />,
 			},
 		],
 	},

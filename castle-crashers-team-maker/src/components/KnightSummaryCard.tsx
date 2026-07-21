@@ -5,24 +5,24 @@ import KnightIcon from '../assets/knight-icon.svg?react';
 import './KnightSummaryCard.css';
 
 interface KnightSummaryCardProps {
-	id: number;
+	knight_id: number;
 	name: string;
 	magic: string;
 	weapon: string;
 	pet: string;
 	color: string;
-	onDelete: (id: number) => void;
+	onDelete: (knight_id: number) => void;
 }
 
-export default function KnightSummaryCard({ id, name, magic, weapon, pet, color, onDelete }: KnightSummaryCardProps) {
+export default function KnightSummaryCard({ knight_id, name, magic, weapon, pet, color, onDelete }: KnightSummaryCardProps) {
 	const navigate = useNavigate();
 
 	const handleDelete = async () => {
-		const { error } = await supabase.from('knights').delete().eq('knight_id', id);
+		const { error } = await supabase.from('knights').delete().eq('knight_id', knight_id);
 		if (error) {
 			console.error(error);
 		} else {
-			onDelete(id);
+			onDelete(knight_id);
 		}
 	};
 
@@ -33,8 +33,8 @@ export default function KnightSummaryCard({ id, name, magic, weapon, pet, color,
 			<p>Magic: {magic}</p>
 			<p>Weapon: {weapon}</p>
 			<p>Pet: {pet}</p>
-			<div className="summary-buttons">
-				<button onClick={() => navigate(`/edit/${id}`)}>Edit</button>
+			<div className="button-container">
+				<button onClick={() => navigate(`/edit/${knight_id}`)}>Edit</button>
 				<button onClick={handleDelete}>Delete</button>
 			</div>
 		</div>
