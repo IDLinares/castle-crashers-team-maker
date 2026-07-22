@@ -12,11 +12,34 @@
 	padding: 2rem;
 	box-shadow: var(--shadow);
 	width: 100%;
-	max-width: 420px;
+	max-width: 620px;
 }
 
 .create-knight-form {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+}
+
+.create-knight-form input[type="text"],
+.create-knight-form select {
+	width: 100%;
+	box-sizing: border-box;
+	background: #FFA711;
+	color: #2C1A00;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 12px;
+	font-size: 1rem;
+	font-weight: 600;
+	appearance: auto;
+}
+
+.create-knight-form input[type="text"]::placeholder {
+	color: #7A4800;
+}
+
+.create-knight-form select option {
+	background: #CC7A00;
+	color: #fff;
 }

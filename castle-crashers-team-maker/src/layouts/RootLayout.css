@@ -5,22 +5,42 @@
 	padding: 0 24px;
 }
 
-.sidebar {
-	background: rgba(95, 25, 38, 0.7);
-	width: 250px;
-	min-height: 100vh;
+.root-layout > header {
 	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	padding: 24px 16px;
-	box-sizing: border-box;
-	flex-shrink: 0;
-	color: var(--text-h);
+	align-self: stretch;
 }
 
-a.active {
-	color: #ff0000;
-	font-weight: bold;
+.sidebar {
+	background: #FFA711;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 32px 16px;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	flex: 1;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: #2C1A00;
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding: 6px 16px;
+	border-radius: 999px;
+	text-align: center;
+	transition: background 0.15s ease;
+}
+
+.sidebar a:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a.active {
+	background: #CC7A00;
+	color: #fff;
 }
 
 .main-content {

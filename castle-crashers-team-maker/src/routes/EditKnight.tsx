@@ -44,6 +44,15 @@ export default function EditKnight() {
 		}
 	};
 
+	const handleDelete = async () => {
+		const { error } = await supabase.from('knights').delete().eq('knight_id', id);
+		if (error) {
+			console.error(error);
+		} else {
+			navigate('/gallery');
+		}
+	};
+
 	const initialValues: Partial<FormValues> | undefined = knight
 		? {
 				name: knight.name,
@@ -69,6 +78,7 @@ export default function EditKnight() {
 						<p>Color: {knight?.color}</p>
 					</div>
 				</div>
+				<span className="edit-arrow">→</span>
 				<div className="update-section">
 					<h3>Updated Knight's Attributes</h3>
 					<CreateKnightForm key={knight?.knight_id} initialValues={initialValues} onSubmit={handleSubmit} />
@@ -78,8 +88,8 @@ export default function EditKnight() {
 				<button type="submit" form="knight-form">
 					Update Knight
 				</button>
-				<button type="reset" form="knight-form">
-					Reset
+				<button type="button" onClick={handleDelete}>
+					Delete Knight
 				</button>
 			</div>
 		</div>

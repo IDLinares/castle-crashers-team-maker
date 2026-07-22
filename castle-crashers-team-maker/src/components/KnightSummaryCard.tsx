@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { supabase } from '../supabase';
 
 import KnightIcon from '../assets/knight-icon.svg?react';
@@ -28,11 +28,13 @@ export default function KnightSummaryCard({ knight_id, name, magic, weapon, pet,
 
 	return (
 		<div className="card">
-			<h2>{name}</h2>
-			<KnightIcon className="knight-icon" style={{ color: color }} />
-			<p>Magic: {magic}</p>
-			<p>Weapon: {weapon}</p>
-			<p>Pet: {pet}</p>
+			<Link className="knight-attributes" to={`/detail/${knight_id}`}>
+				<h2>{name}</h2>
+				<KnightIcon className="knight-icon" style={{ color: color }} />
+				<p>Magic: {magic ?? 'None'}</p>
+				<p>Weapon: {weapon ?? 'None'}</p>
+				<p>Pet: {pet ?? 'None'}</p>
+			</Link>
 			<div className="button-container">
 				<button onClick={() => navigate(`/edit/${knight_id}`)}>Edit</button>
 				<button onClick={handleDelete}>Delete</button>

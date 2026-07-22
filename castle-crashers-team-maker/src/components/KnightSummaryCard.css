@@ -3,19 +3,44 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 24px;
-	padding: 24px;
+	gap: 12px;
+	padding: 16px;
 	border: 1px solid #333;
 	border-radius: 8px;
-}
-
-.card:hover {
-	cursor: pointer;
+	width: 220px;
 }
 
 .knight-icon {
-	width: 300px;
-	height: 350px;
+	width: 160px;
+	height: 190px;
 	display: block;
 	margin: 0 auto;
+}
+
+.knight-attributes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+}
+
+.knight-attributes h2 {
+	font-size: 1rem;
+	font-weight: 800;
+	text-align: center;
+	margin: 0;
+}
+
+.knight-attributes p {
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-align: center;
+	margin: 0;
+}
+
+.knight-attributes:hover {
+	cursor: pointer;
 }
