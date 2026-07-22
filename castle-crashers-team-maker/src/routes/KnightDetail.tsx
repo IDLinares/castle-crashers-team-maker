@@ -48,7 +48,7 @@ export default function KnightDetail() {
 
 	return (
 		<div className="main-layout">
-			<h1>{knightDetails?.name === null ? `${knightDetails.name} Details` : `Details`}</h1>
+			<h1>{knightDetails?.name ? `${knightDetails.name} Details` : `Details`}</h1>
 			<div className="two-col-layout">
 				<div className="name-section">
 					<KnightIcon className="knight-icon" style={{ color: knightDetails?.color }} />
